@@ -1,0 +1,3 @@
+@model Categoria
+@{ ViewData["Title"] = "Detalhes"; }
+<h1>Detalhes de Categoria</h1><dl class="details"><dt>Nome</dt><dd>@Model.Nome</dd></dl><a class="button" asp-action="Edit" asp-route-id="@Model.CategoriaId">Editar</a> <a class="button secondary" asp-action="Index">Voltar</a>

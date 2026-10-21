@@ -1,0 +1,4 @@
+@model IEnumerable<Cliente>
+@{ ViewData["Title"] = "Clientes"; }
+<div class="toolbar"><div><h1>Clientes</h1><p class="muted">Gerencie os registros cadastrados.</p></div><a class="button" asp-action="Create">Novo registro</a></div>
+<table><thead><tr><th>Nome</th><th>Email</th><th>Ações</th></tr></thead><tbody>@foreach (var item in Model) { <tr><td>@item.Nome</td><td>@item.Email</td><td><a asp-action="Details" asp-route-id="@item.ClienteId">Detalhes</a><a asp-action="Edit" asp-route-id="@item.ClienteId">Editar</a><a asp-action="Delete" asp-route-id="@item.ClienteId">Excluir</a></td></tr> }</tbody></table>
